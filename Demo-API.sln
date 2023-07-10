@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Dockerfile = Dockerfile
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-API.Test", "Demo-API.Test\Demo-API.Test.csproj", "{7FB76E55-C7E3-4084-B086-3C6F2DDF7609}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{611F9737-B026-4B97-A7CE-A3701A34B765}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{611F9737-B026-4B97-A7CE-A3701A34B765}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{611F9737-B026-4B97-A7CE-A3701A34B765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FB76E55-C7E3-4084-B086-3C6F2DDF7609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FB76E55-C7E3-4084-B086-3C6F2DDF7609}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FB76E55-C7E3-4084-B086-3C6F2DDF7609}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FB76E55-C7E3-4084-B086-3C6F2DDF7609}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
