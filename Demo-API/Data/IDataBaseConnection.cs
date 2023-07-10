@@ -9,6 +9,7 @@ namespace Demo_API.Data
 		Task<DemoEntity> ReadEntity(string entityID);
 		Task<bool> UpdateEntity(DemoEntity demoEntity);
 		Task<bool> DeleteEntity(string entityID);
+		Task<List<DemoEntity>> GetAllEntities();
 	}
 }
 

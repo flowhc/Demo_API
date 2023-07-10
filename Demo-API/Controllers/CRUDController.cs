@@ -103,5 +103,12 @@ public class CRUDController : ControllerBase
         return Ok(await _dataEnrichment.GetMoreData(query));
     }
 
+    [HttpGet("All")]
+    public async Task<IActionResult> GetAllEntities()
+    {
+        List<DemoEntity> results = await _dataBaseConnection.GetAllEntities();
+        return Ok(JsonConvert.SerializeObject(results));
+    }
+
 }
 

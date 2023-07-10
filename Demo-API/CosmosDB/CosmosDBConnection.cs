@@ -137,6 +137,18 @@ namespace Demo_API.CosmosDB
                 return false;
             }
         }
+
+        public async Task<List<DemoEntity>> GetAllEntities()
+        {
+            List<CosmosDBDemoEntity> results = await GetFromAnchorCache(new TableQuery<CosmosDBDemoEntity>()
+                .Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, "0")));
+            List<DemoEntity> resultsDemoEntity = new List<DemoEntity>();
+            foreach(CosmosDBDemoEntity cosmosDBDemoEntity in results)
+            {
+                resultsDemoEntity.Add(cosmosDBDemoEntity.CosmosDBEntityToDemoEntity());
+            }
+            return resultsDemoEntity; 
+        }
     }
 }
 

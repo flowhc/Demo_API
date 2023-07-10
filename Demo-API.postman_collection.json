@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "b515b926-a1c8-423a-9574-78cd352f1687",
+		"name": "Demo-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Wikipedia Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Data/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Data",
+						"test"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read the entity b3b8da46859d4ecf897a0917bcea099f",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Read/b3b8da46859d4ecf897a0917bcea099f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Read",
+						"b3b8da46859d4ecf897a0917bcea099f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new entity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"funfact\": \"Mein neuster FunFact 2\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/Create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit the entity b3b8da46859d4ecf897a0917bcea099f",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"RowKey\": \"b3b8da46859d4ecf897a0917bcea099f\", \"funfact\": \"Mein neuster FunFact 1\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/Update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete the entity",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Delete/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Delete",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/All",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"All"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
