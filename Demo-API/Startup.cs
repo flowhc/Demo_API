@@ -1,6 +1,7 @@
 ﻿using System;
 using Demo_API.CosmosDB;
 using Demo_API.Data;
+using Demo_API.Wikipedia;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Demo_API
@@ -26,6 +27,9 @@ namespace Demo_API
 
             services.AddSingleton<IDataBaseConnection>(
                 new CosmosDBConnection(this.Configuration.GetSection("CosmosDB").GetValue<string>("ConnectionString")));
+
+            services.AddSingleton<IDataEnrichment>(
+                new WikipediaDataEnrichment(this.Configuration.GetSection("Wikipedia").GetValue<string>("uri")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -34,7 +38,7 @@ namespace Demo_API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
+                app.UseSwagger(); 
                 app.UseSwaggerUI();
             }
 
